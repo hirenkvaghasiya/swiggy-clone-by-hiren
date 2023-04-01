@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
+}
+
+.header__container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo__container {
+    width: auto;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav {
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 10px;
+}
+
+.search_container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 40px 10px 40px;
+}
+
+input[type=text] {
+    width: 40vw;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 50vw;
+}
+
+.res__container {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.res__card__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.res__card {
+    width: 260px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    border-radius: 4px;
+}
+
+.res__card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+}
+
+.res__card__img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
+
+.res__info {
+    padding: 10px 20px 10px 20px;
+    line-height: 1.6rem;
+}
+
+.res__info h2 {
+    padding-bottom: 5px;
+    font-size: 1.063rem;
+    color: #333333;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.res__info h4 {
+    color: #555555;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.res__info h4.res__cuisines {
+    font-size: 0.875rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 18px;
+}
+
+.res__card__bottom {
+    display: flex;
+    justify-content: space-between;
+}
