@@ -1,19 +1,16 @@
-const parent = React.createElement("div", { id: "parent" },
-    [
-        React.createElement("div", { id: "child" },
-            [
-                React.createElement("h1", {}, "I'm an H1 Tag inside of #child"),
-                React.createElement("h2", {}, "I'm an H2 Tag inside of #child")
-            ]
-        ),
-        React.createElement("div", { id: "child2" },
-            [
-                React.createElement("h1", {}, "I'm an H1 Tag inside of #child2"),
-                React.createElement("h2", {}, "I'm an H2 Tag inside of #child2 ")
-            ]
-        )
-    ]
-);
+import React from "react";
+import ReactDOM from 'react-dom/client';
+
+const ChildComponent = () => (<h1>Child Component</h1>)
+
+const MainComponent = () => {
+    return(
+        <div className="container">
+            <h1>Main Heading from MainComponent</h1>
+            <ChildComponent />
+        </div>
+    )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<MainComponent />);
