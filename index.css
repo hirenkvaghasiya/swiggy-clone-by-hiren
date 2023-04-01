@@ -8,7 +8,7 @@
 }
 
 header {
-    box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
+    box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .15);
 }
 
 .header__container {
@@ -17,7 +17,7 @@ header {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 40px;
 }
 
 .logo__container {
@@ -26,6 +26,7 @@ header {
 
 .logo {
     width: 140px;
+    cursor: pointer;
 }
 
 nav {
@@ -40,30 +41,55 @@ nav ul {
 nav ul li {
     padding: 10px;
     margin: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
 }
 
-.search_container {
+.filter__container {
     display: flex;
-    justify-content: center;
-    padding: 30px 40px 10px 40px;
+    justify-content: space-between;
+    padding: 30px 35px 10px 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter__toprated__btn {
+    border: 1px solid #222222;
+    background: #222222;
+    color: #FFFFFF;
+    padding: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.filter__toprated__btn:hover {
+    background: transparent;
+    border: 1px solid #222222;
+    color: #111111;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
 }
 
 input[type=text] {
-    width: 40vw;
+    width: 10vw;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 20px 12px 20px;
     transition: width 0.4s ease-in-out;
+    text-align: center;
 }
 
 input[type=text]:focus {
-    width: 50vw;
+    width: 18vw;
 }
 
 .res__container {
-    padding: 0 20px;
+    padding: 0 20px 20px 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -79,6 +105,8 @@ input[type=text]:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 15px;
     border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .res__card:hover {

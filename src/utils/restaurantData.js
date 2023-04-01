@@ -1,4 +1,4 @@
-[
+const restaurantData = [
     {
         "type": "restaurant",
         "data": {
@@ -1948,3 +1948,5 @@
         "subtype": "basic"
     }
 ]
+
+export default restaurantData;
