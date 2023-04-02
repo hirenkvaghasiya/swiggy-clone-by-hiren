@@ -1,8 +1,10 @@
 # Namaste React 🚀
 
+Relevance Restaurants Data
+![Alt text](extra-files/RelevanceRestaurantsData.png?raw=true "02/04/2023 - 04:12 AM GST")
 
-![Alt text](extra-files/02042023.png?raw=true "02/04/2023 - 04:12 AM GST")
-
+Top Rated Restaurants Data
+![Alt text](extra-files/TopRatedRestaurantsData.png?raw=true "02/04/2023 - 04:12 AM GST")
 
 # Parcel
 - Dev Build
