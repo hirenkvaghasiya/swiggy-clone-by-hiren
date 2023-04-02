@@ -1,23 +1,32 @@
 # Swiggy clone by Hiren 🚀 (ReactJS)
+Swiggy is an Indian online food ordering and delivery platform. Founded in 2014, Swiggy is based in Bangalore and operates in 500 Indian cities as of September 2021.
 
-# Screenshots
-- Relevance Restaurants Data
+## How to get Started 🚀
+**There are two methods for getting started with this repo.**
+
+#### Familiar with Git ?
+```
+- https://github.com/hirenkvaghasiya/swiggy-clone-by-hiren.git
+- npm install
+- npm run start OR npm start
+```
+
+#### Not Familiar with Git ?
+download the .zip file. Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+
+```
+> cd swiggy-clone-by-hiren
+> npm install
+> npm run start OR npm start
+```
+
+## Snap Shots 📷
+
+**Relevance Restaurants Data / Landing Page**
 ![Alt text](extra-files/RelevanceRestaurantsData.png?raw=true "02/04/2023 - 04:12 AM GST")
 
-- Top Rated Restaurants Data
+**Top Rated Restaurants Data (Filter)**
 ![Alt text](extra-files/TopRatedRestaurantsData.png?raw=true "02/04/2023 - 04:12 AM GST")
-
-# Project Initial Guide
-- Clone the project
-    - https://github.com/hirenkvaghasiya/swiggy-clone-by-hiren.git
-- Install dependencies
-    - npm install
-
-# Project Execution
-- Run the project
-    - npm run start OR npm run
-- Build the project
-    - npm run build
 
 # Parcel JS
 
