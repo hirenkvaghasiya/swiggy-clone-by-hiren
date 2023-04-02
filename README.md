@@ -1,7 +1,7 @@
 # Namaste React 🚀
 
 
-![Alt text](02042023-0412.png?raw=true "02/04/2023 - 04:12 AM GST")
+![Alt text](extra-files/02042023.png?raw=true "02/04/2023 - 04:12 AM GST")
 
 
 # Parcel

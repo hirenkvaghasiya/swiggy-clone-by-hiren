@@ -1,7 +1,12 @@
-import restaurantData from '../utils/restaurantData';
+import { useState } from 'react';
+
+import resData from '../utils/restaurantData';
 import RestaurantCard from './RestaurantCard';
 
 const Body = () => {
+
+    const [restaurantsData, setRestaurantsData] = useState(resData);
+
     return (
         <main className="main__content">
             <div className="filter__container">
@@ -9,7 +14,7 @@ const Body = () => {
                     <button
                         className="filter__btn"
                         onClick={() => {
-                            console.log("Filter");
+                            setRestaurantsData(resData);
                         }}
                     >
                         Relevance
@@ -18,26 +23,20 @@ const Body = () => {
                     <button
                         className="filter__btn"
                         onClick={() => {
-                            console.log("Filter");
+                            const filteredData = restaurantsData.filter(
+                                (res) => res.data.avgRating > 4
+                            )
+                            setRestaurantsData(filteredData);
                         }}
                     >
                         Top Rated Restaurant
-                    </button>
-
-                    <button
-                        className="filter__btn"
-                        onClick={() => {
-                            console.log("Filter");
-                        }}
-                    >
-                        Fast Delivery Time
                     </button>
                 </div>
                 <input type="text" className="search" placeholder="Search" />
             </div>
             <div className="res__container res__card__container">
                 {
-                    restaurantData.map((restaurant) => <RestaurantCard key={restaurant.data.id} restData={restaurant} />)
+                    restaurantsData.map((restaurant) => <RestaurantCard key={restaurant.data.id} restData={restaurant} />)
                 }
             </div>
         </main>
