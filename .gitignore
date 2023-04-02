@@ -1,4 +1,4 @@
 /node_modules
 /dist
 .parcel-cache
-./extra-files/assignments
+/extra-files/assignments
