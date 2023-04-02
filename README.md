@@ -1,9 +1,10 @@
-# Namaste React 🚀
+# Swiggy clone by Hiren 🚀 (ReactJS)
 
-Relevance Restaurants Data
+# Screenshots
+- Relevance Restaurants Data
 ![Alt text](extra-files/RelevanceRestaurantsData.png?raw=true "02/04/2023 - 04:12 AM GST")
 
-Top Rated Restaurants Data
+- Top Rated Restaurants Data
 ![Alt text](extra-files/TopRatedRestaurantsData.png?raw=true "02/04/2023 - 04:12 AM GST")
 
 # Project Initial Guide
