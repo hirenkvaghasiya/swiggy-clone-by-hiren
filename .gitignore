@@ -2,4 +2,4 @@
 /dist
 .parcel-cache
 /extra-files/assignments
-*.DS_Store
+**/.DS_Store
