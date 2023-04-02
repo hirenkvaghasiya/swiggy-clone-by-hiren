@@ -52,34 +52,41 @@ nav ul li {
     padding: 30px 35px 10px 35px;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: center;
 }
 
-.filter__toprated__btn {
-    border: 1px solid #222222;
-    background: #222222;
-    color: #FFFFFF;
-    padding: 15px;
-    font-weight: 700;
+.filter__btn {
+    border-bottom: 1px solid #989898;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: transparent;
+    color: #686b78;
+    padding: 10px 2px;
+    margin-right: 20px;
+    font-weight: 500;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
     transition: all 0.3s ease-in-out;
 }
 
-.filter__toprated__btn:hover {
+.filter__btn:hover {
     background: transparent;
-    border: 1px solid #222222;
     color: #111111;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+    transform: translateY(-2.5)
+}
+
+.filter__btn .active {
+    border-bottom: 1px solid #111111;
+    color: #111111;
 }
 
 input[type=text] {
     width: 10vw;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border: 1px solid #989898;
+    border-radius: 0px;
+    font-size: 14px;
     background-color: white;
-    padding: 12px 20px 12px 20px;
+    padding: 10px 20px 10px 20px;
     transition: width 0.4s ease-in-out;
     text-align: center;
 }
