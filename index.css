@@ -80,20 +80,37 @@ nav ul li {
     color: #111111;
 }
 
+input[type=text]:focus::placeholder {
+    color: #686b78;
+    opacity: 1;
+    /* Firefox */
+    font-weight: 500;
+}
+
+input[type=text]:focus::placeholder {
+    color: #111111;
+}
+
 input[type=text] {
     width: 10vw;
-    border: 1px solid #989898;
+    border: 1px solid #686b78;
     border-radius: 0px;
     font-size: 14px;
     background-color: white;
     padding: 10px 20px 10px 20px;
     transition: width 0.4s ease-in-out;
     text-align: center;
+    color: #111111;
+    font-weight: 500;
 }
 
 input[type=text]:focus {
     width: 18vw;
+    outline: none;
+    border: 1px solid #111111;
 }
+
+input[type=text]:focus-visible {}
 
 .res__container {
     padding: 0 20px 20px 20px;
