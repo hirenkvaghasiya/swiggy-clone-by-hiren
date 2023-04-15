@@ -40,36 +40,26 @@ const Body = () => {
                     <button
                         className="filter__btn"
                         onClick={() => {
-                            // const filteredData = restaurantsData.filter(
-                            //     (res) => res.data.avgRating > 4
-                            // )
-                            // setRestaurantsData(filteredData);
+                            const filteredData = restaurantsData.filter(
+                                (res) => res.data.avgRating > 4
+                            )
+                            setRestaurantsData(filteredData);
                         }}
                     >
                         Top Rated Restaurant
                     </button>
                 </div>
-                <div className="search__container">
-                    <input
-                        type="text"
-                        className="search"
-                        placeholder="Search"
-                        value={searchText}
-                        onChange={(e) => {
-                            setSearchText(e.target.value);
-                            const data = filterData(searchText, restaurantsData);
-                            setRestaurantsData(data);
-                        }}
-                    />
-                    <button
-                        onClick={() => {
-                            const data = filterData(searchText, restaurantsData);
-                            setRestaurantsData(data);
-                        }}
-                    >
-                        Search
-                    </button>
-                </div>
+                <input
+                    type="text"
+                    className="search"
+                    placeholder="Search"
+                    value={searchText}
+                    onChange={(e) => {
+                        setSearchText(e.target.value);
+                        const data = filterData(searchText, restaurantsData);
+                        setRestaurantsData(data);
+                    }}
+                />
             </div>
             {
                 restaurantsData.length === 0 ? (
