@@ -17,7 +17,7 @@ header {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    padding: 10px 0px;
 }
 
 .logo__container {
@@ -44,6 +44,10 @@ nav ul li {
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
+}
+
+.main__content {
+    padding: 0 0 100px 0;
 }
 
 .filter__container {
@@ -242,4 +246,27 @@ input[type=text]:focus-visible {}
 
 .shimmer__line:last-child {
     border-radius: 0 0 4px 4px;
+}
+
+/* Footer */
+/* Author credit footer */
+
+footer {
+    position: fixed;
+    background-color: #333;
+    padding: 14px;
+    z-index: 999;
+    bottom: 0;
+    width: 100%;
+}
+
+.author-footer {
+    text-align: center;
+    padding: 14px auto;
+    color: #f6f7f9;
+    font-weight: 600;
+}
+
+.author-footer a {
+    color: #f6f7f9
 }
