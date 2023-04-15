@@ -1,15 +1,40 @@
 
 
-const Shimmer = () => {
+const Shimmer = ({ image, cards, lines }) => {
+
+    const cardsArr = [];
+    const linesArr = [];
+
+    for (let i = 0; i < cards; i++) {
+        cardsArr.push({ card: i });
+    }
+    for (let i = 0; i < lines; i++) {
+        linesArr.push({ line: i });
+    }
+
+    console.log(linesArr);
+
+    // <div className="shimmer__line" key={index}></div>
+
     return (
-        <div className="shimmer__card">
-            <div className="shimmer__img"></div>
-            <div className="shimmer__info">
-                <div className="shimmer__line"></div>
-                <div className="shimmer__line"></div>
-                <div className="shimmer__line"></div>
-            </div>
-        </div>
+        <>
+            {
+                cardsArr.map((card, index) =>
+                    <div className="shimmer__card" key={index}>
+                        {
+                            image ? <div className="shimmer__img"></div> : null
+                        }
+                        <div className="shimmer__info">
+                            {
+                                linesArr.map((line, index) =>
+                                    <div className="shimmer__line" key={index}></div>
+                                )
+                            }
+                        </div>
+                    </div>
+                )
+            }
+        </>
     )
 }
 

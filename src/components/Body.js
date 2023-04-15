@@ -61,17 +61,11 @@ const Body = () => {
                     }}
                 />
             </div>
+
             {
                 restaurantsData.length === 0 ? (
                     <div className="shimmer__container">
-                        <Shimmer />
-                        <Shimmer />
-                        <Shimmer />
-                        <Shimmer />
-                        <Shimmer />
-                        <Shimmer />
-                        <Shimmer />
-                        <Shimmer />
+                        <Shimmer image={true} cards={8} lines={3} />
                     </div>
                 ) : (
                     <div className="res__container res__card__container">

@@ -231,7 +231,7 @@ input[type=text]:focus-visible {}
 }
 
 .shimmer__info {
-    height: 120px;
+    height: auto;
 }
 
 .shimmer__line {
