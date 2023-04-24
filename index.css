@@ -47,7 +47,7 @@ nav ul li {
 }
 
 .main__content {
-    padding: 0 0 100px 0;
+    padding: 0 0 20px 0;
 }
 
 .filter__container {
@@ -252,12 +252,11 @@ input[type=text]:focus-visible {}
 /* Author credit footer */
 
 footer {
-    position: fixed;
     background-color: #333;
     padding: 14px;
     z-index: 999;
-    bottom: 0;
     width: 100%;
+    box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .15);
 }
 
 .author-footer {

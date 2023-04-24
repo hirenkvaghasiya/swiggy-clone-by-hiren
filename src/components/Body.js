@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
+import { ShimmerUIButton } from 'hirenkvaghasiya1';
+// import { ShimmerUIButton } from 'shimmer-ui-effect';
 
 function filterData(searchText, restaurantsData) {
     const filterData = restaurantsData.filter((restaurant) =>
@@ -26,6 +28,9 @@ const Body = () => {
 
     return (
         <main className="main__content">
+
+            <ShimmerUIButton />
+
             <div className="filter__container">
                 <div className="filter__row">
                     <button
@@ -65,7 +70,7 @@ const Body = () => {
             {
                 restaurantsData.length === 0 ? (
                     <div className="shimmer__container">
-                        <Shimmer image={true} cards={8} lines={3} />
+                        <Shimmer image={true} cards={15} lines={3} />
                     </div>
                 ) : (
                     <div className="res__container res__card__container">

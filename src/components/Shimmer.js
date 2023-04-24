@@ -12,8 +12,6 @@ const Shimmer = ({ image, cards, lines }) => {
         linesArr.push({ line: i });
     }
 
-    console.log(linesArr);
-
     // <div className="shimmer__line" key={index}></div>
 
     return (
