@@ -1,4 +1,5 @@
 import { CDN_URL } from "../utils/constant";
+import { res_img_notFound } from "../assets/images/";
 
 const RestaurantCard = (props) => {
 
@@ -8,7 +9,7 @@ const RestaurantCard = (props) => {
         <div className="res__card">
             <div className="res__img">
                 <img
-                    src={CDN_URL + cloudinaryImageId}
+                    src={!cloudinaryImageId ? res_img_notFound : CDN_URL + cloudinaryImageId}
                     className="res__card__img"
                     alt="restaurant"
                 />

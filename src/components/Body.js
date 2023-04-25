@@ -1,55 +1,49 @@
 import { useEffect, useState } from 'react';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
-import { ShimmerUIButton } from 'hirenkvaghasiya1';
-// import { ShimmerUIButton } from 'shimmer-ui-effect';
+import { API_URL } from '../utils/constant';
+import { Link } from 'react-router-dom';
 
-function filterData(searchText, restaurantsData) {
-    const filterData = restaurantsData.filter((restaurant) =>
+function filterData(searchText, allRestaurants) {
+    const filterData = allRestaurants.filter((restaurant) =>
         restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
     );
     return filterData;
 }
 
 const Body = () => {
-
-    const [restaurantsData, setRestaurantsData] = useState([]);
+    const [allRestaurants, setAllRestaurants] = useState([]);
+    const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [searchText, setSearchText] = useState("");
 
     useEffect(() => {
+        setSearchText("");
         getRestaurants();
     }, []);
 
     async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(API_URL);
         const json = await data.json();
-        setRestaurantsData(json?.data?.cards[2]?.data?.data?.cards);
+        setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     }
+
+    if (!allRestaurants) return null;
 
     return (
         <main className="main__content">
-
-            <ShimmerUIButton />
-
             <div className="filter__container">
                 <div className="filter__row">
                     <button
                         className="filter__btn"
-                        onClick={() => {
-                            getRestaurants();
-                        }}
+                        onClick={() => console.log("Relevance")}
                     >
                         Relevance
                     </button>
 
                     <button
                         className="filter__btn"
-                        onClick={() => {
-                            const filteredData = restaurantsData.filter(
-                                (res) => res.data.avgRating > 4
-                            )
-                            setRestaurantsData(filteredData);
-                        }}
+                        onClick={() => console.log("Top Rated Restaurant")}
                     >
                         Top Rated Restaurant
                     </button>
@@ -61,23 +55,25 @@ const Body = () => {
                     value={searchText}
                     onChange={(e) => {
                         setSearchText(e.target.value);
-                        const data = filterData(searchText, restaurantsData);
-                        setRestaurantsData(data);
+                        const data = filterData(searchText, allRestaurants);
+                        e.target.value === "" ? setFilteredRestaurants(allRestaurants) : setFilteredRestaurants(data);
                     }}
                 />
             </div>
 
             {
-                restaurantsData.length === 0 ? (
+                allRestaurants?.length === 0 ? (
                     <div className="shimmer__container">
-                        <Shimmer image={true} cards={15} lines={3} />
+                        <Shimmer image={true} cards={15} lines={3} width={260} />
                     </div>
                 ) : (
                     <div className="res__container res__card__container">
                         {
-                            restaurantsData?.map((restaurant) => {
-                                return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
-                            })
+                            filteredRestaurants?.length === 0 ? <h2 className='nores__error'>No Restaurant Found, Search Other Restaurant 🤗</h2>
+                                :
+                                filteredRestaurants?.map((restaurant) => {
+                                    return <Link to={"/restaurant/" + restaurant.data.id} key={restaurant.data.id}><RestaurantCard {...restaurant.data} /></Link>
+                                })
                         }
                     </div>
                 )

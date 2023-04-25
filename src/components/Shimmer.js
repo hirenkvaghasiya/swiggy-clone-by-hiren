@@ -1,6 +1,6 @@
 
 
-const Shimmer = ({ image, cards, lines }) => {
+const Shimmer = ({ image, cards, lines, width, height }) => {
 
     const cardsArr = [];
     const linesArr = [];
@@ -25,7 +25,7 @@ const Shimmer = ({ image, cards, lines }) => {
                         <div className="shimmer__info">
                             {
                                 linesArr.map((line, index) =>
-                                    <div className="shimmer__line" key={index}></div>
+                                    <div className="shimmer__line" key={index} style={{ width: width, height: height }}></div>
                                 )
                             }
                         </div>

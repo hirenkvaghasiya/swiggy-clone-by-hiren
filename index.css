@@ -5,6 +5,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
 }
 
 header {
@@ -44,6 +50,15 @@ nav ul li {
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a {
+    color: inherit;
+}
+
+nav ul li:hover {
+    transform: translateY(-2.5)
 }
 
 .main__content {
@@ -146,6 +161,15 @@ input[type=text]:focus-visible {}
     margin: 0 auto;
 }
 
+.nores__error {
+    color: #333;
+    text-align: center;
+    width: 1200px !important;
+    padding: 20px 20px 10px;
+    display: flex;
+    justify-content: center;
+}
+
 .res__card {
     width: 260px;
     height: auto;
@@ -211,7 +235,6 @@ input[type=text]:focus-visible {}
 }
 
 .shimmer__card {
-    width: 260px;
     border-radius: 4px;
     margin: 15px;
     transition: all .3s ease-in-out;
@@ -219,6 +242,7 @@ input[type=text]:focus-visible {}
     -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
     background-repeat: no-repeat;
     animation: shimmer 1.5s infinite;
+    align-items: start !important;
 }
 
 @keyframes shimmer {
@@ -240,7 +264,7 @@ input[type=text]:focus-visible {}
 
 .shimmer__line {
     height: 30px;
-    margin: 10px auto;
+    margin: 10px 0;
     background-color: #eaeaea;
 }
 
